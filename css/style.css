@@ -62,7 +62,6 @@ body {
 .hotel-view {
   height: 80rem;
   background-color: #fff;
-  background-color: orangered;
   flex: 1; }
 
 .logo {
@@ -84,23 +83,23 @@ body {
     border-radius: 100px;
     width: 90%;
     margin-right: -3.25rem; }
-    .search__input:focus {
-      outline: none;
-      width: 100%;
-      background-color: var(--color-grey-light-3);
-      transition: all .2s; }
-    .search__input::placeholder {
-      font-weight: 100;
-      color: var(--color-grey-light-4); }
+  .search:focus {
+    outline: none;
+    width: 100%;
+    background-color: var(--color-grey-light-3);
+    transition: all .2s; }
+  .search::placeholder {
+    font-weight: 100;
+    color: var(--color-grey-light-4); }
   .search__input:focus + .search__btn {
     background-color: var(--color-grey-light-3); }
   .search__btn {
     border: none;
     background-color: var(--color-grey-light-2); }
-    .search__btn:focus {
-      outline: none; }
-    .search__btn:active {
-      transform: translateY(2px); }
+  .search:focus {
+    outline: none; }
+  .search:active {
+    transform: translateY(2px); }
   .search__icon {
     fill: var(--color-grey-dark-3);
     width: 2rem;
@@ -144,12 +143,57 @@ body {
     border-radius: 50%;
     margin-right: 0.8rem; }
 
-.side-nav__icon {
-  width: 1.75rem;
-  height: 1.75rem; }
+.side-nav {
+  font-size: 1.4rem;
+  list-style: none;
+  margin-top: 3.5rem; }
+  .side-nav__item {
+    position: relative; }
+    .side-nav__item:not(:last-child) {
+      margin-bottom: .5rem; }
+  .side-nav__item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: var(--color-primary);
+    transform: scaleY(0);
+    transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s; }
+  .side-nav__item:hover::before, .side-nav__item--active::before {
+    transform: scaleY(1);
+    width: 100%; }
+  .side-nav__item:active::before {
+    background-color: var(--color-primary-light); }
+  .side-nav__link:link, .side-nav__link:visited {
+    color: var(--color-grey-light-1);
+    position: relative;
+    z-index: 10;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 3rem; }
+  .side-nav__icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    margin-right: 2rem;
+    fill: currentColor; }
 
 .legal {
   font-size: 1.2rem;
   color: var(--color-grey-light-4);
+  align-items: center;
   text-align: center;
   padding: 2.5rem; }
+  .legal__heart {
+    width: 1.2rem;
+    height: 1.2rem;
+    fill: var(--color-primary); }
+
+.gallery {
+  display: flex; }
+  .gallery__photo {
+    width: 100%;
+    display: block; }

@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
-        
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link
+            href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+
         <title>trillo &mdash; Your all-in-one booking app</title>
     </head>
     <body>
         <div class="container">
             <header class="header">
-                <img class="logo" src="img/logo.png" alt="Logo Image">
+                <img class="logo" src="img/logo.png" alt="Logo Image" />
                 <form class="search" action="#">
-                    <input class="search__input" type="text" placeholder="Search hotels...">
+                    <input class="search__input" type="text" placeholder="Search hotels..." />
                     <button class="search__btn">
                         <svg class="search__icon">
                             <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
@@ -37,7 +40,7 @@
                         <span class="user-nav__notification">12</span>
                     </div>
                     <div class="user-nav__user">
-                        <img class="user-nav__user-photo" src="img/user.jpg" alt="User Photo">
+                        <img class="user-nav__user-photo" src="img/user.jpg" alt="User Photo" />
                         <span class="user-nav__user-name">Lakshamana</span>
                     </div>
                 </nav>
@@ -45,7 +48,7 @@
             <div class="content">
                 <nav class="sidebar">
                     <ul class="side-nav">
-                        <li class="side-nav__item">
+                        <li class="side-nav__item side-nav__item--active">
                             <a class="side-nav__link" href="#">
                                 <svg class="side-nav__icon">
                                     <use xlink:href="img/sprite.svg#icon-home"></use>
@@ -79,15 +82,38 @@
                         </li>
                     </ul>
                     <div class="legal">
-                        Made with &lt;3 by Lakshamana @ 2021
-                        <!-- <span>Made with</span> -->
-                        <!-- <svg class="legal__heart"> -->
-                        <!--     <use xlink:href="img/sprite.svg#icon-heart"></use> -->
-                        <!-- </svg> -->
-                        <!-- <span>by Lakshamana @ 2021</span> -->
+                        <span>Made with</span>
+                        <svg class="legal__heart">
+                            <use xlink:href="img/sprite.svg#icon-heart"></use>
+                        </svg>
+                        <span>by Lakshamana @ 2021</span>
                     </div>
                 </nav>
-                <main class="hotel-view">Hotel View</main>
+                <main class="hotel-view">
+                    <div class="gallery">
+                        <figure class="gallery__item">
+                            <img
+                                class="gallery__photo"
+                                src="img/hotel-1.jpg"
+                                alt="Image of Hotel 1"
+                            />
+                        </figure>
+                        <figure class="gallery__item">
+                            <img
+                                class="gallery__photo"
+                                src="img/hotel-2.jpg"
+                                alt="Image of Hotel 2"
+                            />
+                        </figure>
+                        <figure class="gallery__item">
+                            <img
+                                class="gallery__photo"
+                                src="img/hotel-3.jpg"
+                                alt="Image of Hotel 3"
+                            />
+                        </figure>
+                    </div>
+                </main>
             </div>
         </div>
     </body>
